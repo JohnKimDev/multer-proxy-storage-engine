@@ -1,4 +1,4 @@
-# Multer Proxy Storage
+# Multer Proxy Storage Engine
 
 This is a custom multer storage engine that proxy the received file into a remote server.
 The proxy is forwarded as multipart/form-data.
@@ -6,7 +6,7 @@ The proxy is forwarded as multipart/form-data.
 ## Install
 
 ```
-npm install --save multer-proxy-storage
+npm install --save multer-proxy-storage-engine
 ```
 
 ## Usage
@@ -15,16 +15,16 @@ In this example we are forwarding user uploaded file into remote server http://w
 identified with the parameter 'file'.
 
 ``` javascript
-var multer = require('multer')
-var MulterProxyStorage = require('multer-proxy-storage')
+const multer = require('multer')
+const multerProxyStorage = require('multer-proxy-storage-engine')
 
 this.routePost('/uploadFile',
   (req, res, next) => {
     multer({
-      storage: MulterProxyStorage(
+      storage: multerProxyStorage(
         {
           serverPath: `http://www.example.com/upload`,
-          fileParamName: 'file'
+          fileParamName: 'file'     // OPTIONAL
         }),
       preservePath: true
     }).array('file')(req, res, next)
@@ -34,4 +34,4 @@ this.routePost('/uploadFile',
 ```
 
 ## License
-Multer-Proxy-Storage is released under the [MIT](License) license.
+Multer-Proxy-Storage-Engine is released under the [MIT](License) license.
