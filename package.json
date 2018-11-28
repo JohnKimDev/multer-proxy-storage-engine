@@ -1,23 +1,22 @@
 {
-  "name": "multer-proxy-storage",
-  "version": "1.0.2",
-  "description": "Forward multipart/form-data file upload into a specified server.",
+  "name": "multer-proxy-storage-engine",
+  "version": "1.0.0",
+  "description": "Forward multipart/form-data file upload into a remote server.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-    "name": "Denny Harijanto",
-    "email": "denny@nusantara-cloud.com",
-    "url": "http://www.nusantara-cloud.com"
+    "name": "John Kim",
+    "email": "johnkimdev@gmail.com"
   },
-  "homepage": "https://github.com/nusantara-cloud/multer-proxy-storage",
+  "homepage": "https://github.com/JohnKimDev/multer-proxy-storage-engine",
   "repository": {
     "bugs": {
-      "url": "https://github.com/nusantara-cloud/multer-proxy-storage"
+      "url": "https://github.com/JohnKimDev/multer-proxy-storage-engine"
     },
     "type": "git",
-    "url": "git://github.com/nusantara-cloud/multer-proxy-storage.git"
+    "url": "git@github.com:JohnKimDev/multer-proxy-storage-engine.git"
   },
   "license": "MIT",
   "dependencies": {
