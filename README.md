@@ -56,13 +56,19 @@ const upload = multer({
   preservePath: true
 }).array('file'); // NOTE: you can use .single('file') instead of .array('file') if you are expecting only one file
     
-upload(req, res, (err, responseData) => {
-  if (err) {
-    res.send('ERROR');
+upload(req, res, (err, resData) => {
+  if (err instanceof multer.MulterError) {
+    // A Multer error occurred when uploading.  (https://github.com/expressjs/multer/blob/master/lib/multer-error.js)[https://github.com/expressjs/multer/blob/master/lib/multer-error.js]
+
+    res.send('Multer ERROR');
+    console.error(err);
+  } else if (err) {
+    // An unknown error occurred when uploading.
+    res.send('Unknown ERROR');
     console.error(err);
   } else {
     res.send('SUCCESS');
-    console.llog(responseData);
+    console.log(resData);
   }
 });
 ```
