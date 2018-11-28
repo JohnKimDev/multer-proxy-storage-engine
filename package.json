@@ -1,6 +1,6 @@
 {
   "name": "multer-proxy-storage-engine",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Forward multipart/form-data file upload into a remote server.",
   "main": "index.js",
   "scripts": {
